@@ -3,6 +3,9 @@ resource "aws_instance" "JenkinsServer" {
   instance_type          = var.my_instance_type
   key_name               = var.my_key
   vpc_security_group_ids = [aws_security_group.web-traffic.id]
+  user_data = file("jenkins-script.sh")
 
   tags = {
     "Name" = "Jenkins-Server"
+  }
+}

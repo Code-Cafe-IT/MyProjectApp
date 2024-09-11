@@ -7,14 +7,14 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket         = "project-register"
-    key            = "eks-server/terraform.tfstate"
-    region         = "us-east-2"
+  # backend "s3" {
+  #   bucket         = "project-register"
+  #   key            = "eks-server/terraform.tfstate"
+  #   region         = "ap-northeast-1"
 
-  }
+  # }
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "ap-northeast-1"
 }

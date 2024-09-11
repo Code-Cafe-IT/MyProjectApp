@@ -1,10 +1,10 @@
 variable "region" {
   type    = string
-  default = "us-east-2"
+  default = "ap-northeast-1"
 }
 variable "my_instance_type" {
   type    = string
-  default = "t2.micro"
+  default = "t2.medium"
 }
 
 
@@ -22,3 +22,4 @@ variable "ingressrules" {
 variable "egressrules" {
   type    = list(number)
   default = [25, 80, 443, 8080, 8090, 3306, 53]
+}
